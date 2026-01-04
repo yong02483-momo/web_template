@@ -1,0 +1,65 @@
+@use "global" as *;
+////// ハンバーガーメニューの 3本線アイコン自体の設定
+
+.l-hamburger {
+  display: block;
+  position: relative;
+  color: $black;
+  z-index: 60;
+  cursor: pointer;
+  background-color: #3862a9;
+  padding: rem(10) rem(16) rem(6) rem(16);
+}
+
+
+
+/*=============================
+.btn-trigger
+=============================*/
+.btn-trigger {
+  position: relative;
+  width: rem(50);
+  height: rem(30);
+  cursor: pointer;
+  margin: 0 auto;
+}
+.btn-trigger span {
+  position: absolute;
+  left: 10%;
+  width: rem(40);
+  height: rem(4);
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.btn-trigger, .btn-trigger span {
+  display: inline-block;
+  transition: all .5s;
+  box-sizing: border-box;
+}
+.btn-trigger span:nth-of-type(1) {
+  top: 0;
+}
+.btn-trigger span:nth-of-type(2) {
+  top: rem(13);
+}
+.btn-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+
+/*=============================
+.btn01　
+=============================*/
+.btn01.active span:nth-of-type(1) {
+  -webkit-transform: translateY(rem(13)) rotate(-45deg);
+  transform: translateY(rem(13)) rotate(-45deg);
+}
+.btn01.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.btn01.active span:nth-of-type(3) {
+  -webkit-transform: translateY(rem(-13)) rotate(45deg);
+  transform: translateY(rem(-13)) rotate(45deg);
+}
+

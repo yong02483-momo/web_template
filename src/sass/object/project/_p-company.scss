@@ -1,0 +1,472 @@
+@use "global" as *;
+
+// 企業理念の背景分の高さ確保
+.p-company__philosophy {
+   background-color: $gray100; 
+   min-height: 95rem;
+    @include mq("md") {
+    min-height: 115rem;
+    }
+     @include mq("lg") {
+      min-height: 93rem;
+    }
+
+}
+
+.p-company__philosophy-container {
+ background-color: $gray100; 
+ position: relative;
+ padding-bottom: rem(121);
+  @include mq("md") {
+    }
+}
+
+
+.p-company__txt--back {
+  position: absolute;
+  top: -14%;
+  font-size: rem(65);
+
+  @include mq("md") {
+   font-size: rem(140); 
+    top: -61%;
+}
+}
+
+.p-company__philosophy--bg {
+    position: absolute;
+    height: 1050px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    top: 400%;
+   @include mq("md") {
+     top: 540%;
+     height: 1180px;
+  }
+   @include mq("lg") {
+        height: 810px;
+        top: 575%;
+   }
+}
+
+.p-company__philosophy--bg img {
+    transform: scale(4.6) translateX(3px) translateY(84px);
+       @include mq("lg") {
+    transform: scale(1.2) translateX(3px) translateY(84px);
+  }
+
+}
+
+.p-company__philosophy--box01 {
+  background-color: $white;
+  padding: rem(26) rem(16) rem(42) rem(16);
+  position: absolute;
+  width: 95%;
+  z-index: 1;
+  top: 59%;
+  right: 0%;
+  box-shadow : 0px 4px 5px rgba(0,0,0, 0.25);
+   @include mq("md") {
+     padding: rem(48) 0 rem(53) 0;
+        width: 89%;
+        top: 100%;
+        max-width: 1440px;
+   }
+}
+
+.p-company__philosophy--box02 {
+  background-color: $white;
+  padding: rem(30) rem(18) rem(42) rem(18);
+  position: absolute;
+  width: 95%;
+  z-index: 1;
+  top: 505%;
+  left: 0%;
+  box-shadow : 0px 4px 5px rgba(0,0,0, 0.25);
+   @include mq("sm") {
+    top: 475%;
+   }
+   @include mq("md") {
+     padding: rem(50) rem(32) rem(53) rem(32);
+        width: 89%;
+        top: 700%;
+        max-width: 1440px;
+   }
+}
+
+.p-company__philosophy--heading {
+  text-align: center;
+  padding-bottom: rem(24);
+  font-size: rem(25);
+  @include mq("md") {
+  padding-bottom: rem(36);
+  }
+}
+
+.p-company__philosophy--txt {
+  margin: 0 auto;
+  width: 95%;  
+  padding: rem(40) rem(20);
+ background-image: url(../images/common/company/philosophy.jpg);
+   background-position: center;    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+  min-height: rem(320);
+   @include mq("md") {
+     width: 80%;  
+     padding: rem(50) rem(80);
+     min-height: rem(465);
+   }
+    @include mq("xl") {
+      width: 75%;  
+     padding: rem(50) rem(100);
+    
+   }
+}
+
+
+/* 代表メッセージ */
+.p-company__philosophy-box02--content {
+  @include mq("lg") {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.p-company__philosophy-box02--img {
+  aspect-ratio: 326 / 226;
+    overflow: hidden;
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+     @include mq("lg") {
+     width: 45%;
+  }
+}
+
+.p-company__philosophy-box02--txt {
+   max-width: 520px;
+   margin: 0 auto;
+   @include mq("md") {
+   max-width: 640px;
+  }
+   @include mq("lg") {
+    max-width: 1000px;
+     width: 48%;
+  }
+}
+
+.p-company__philosophy--message {
+  font-size: $p3;
+  margin-top: rem(30);
+  margin-bottom: rem(30);
+  @include mq("md") {
+    margin-bottom: rem(36);
+  }
+   @include mq("lg") {
+     margin-top: 0;
+  }
+}
+
+.p-company__philosophy--name {
+  font-size: $p2;
+  text-align: right;
+  font-weight: 400;
+}
+
+
+/*会社概要*/
+.p-company__overview {
+  position: relative;
+  background-color: $gray100;
+  padding: rem(40) 0;
+   @include mq("md") {
+   margin-top: 20%;
+  }
+  @media screen and (min-width: 860px) {
+  margin-top: 16%;
+}
+  @media screen and (min-width: 940px) {
+     margin-top: 4%;
+}
+   @include mq("lg") {
+     margin-top: 0%;
+  }
+  @media screen and (min-width: 1120px) {
+  
+}
+}
+
+.p-company__overview-bg-image {
+    height: 30.0625rem;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: url(../images/common/company/back02.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.p-company__overview--heading {
+   text-align: center;
+  }
+
+.p-company__overview--treat {
+  display: inline-block;
+  letter-spacing: 0.4px;
+  text-align: center;
+  font-size: rem(65);
+  @include mq("md") {
+   font-size: rem(140); 
+}
+}
+
+.p-company__overview--title {
+ margin-top: -10px;
+  @include mq("md") {
+     margin-top: -20px;
+  }
+}
+
+
+.p-company__overview-table {
+  width: 90%; /* テーブル全体の幅を親要素に合わせる */
+  border-collapse: collapse; 
+  border: none; 
+  max-width: 940px;
+  margin: rem(32) auto 0 auto;
+  @include mq("md") {
+      margin-top: rem(55);
+  }
+}
+
+.p-company__overview-table tr {
+  /* 各行の下部にボーダーを設定 */
+  border-bottom: 3px solid $gray100; 
+}
+
+/* 最後の行には下線が不要なことが多いので、除外する */
+.p-company__overview-table tr:last-child {
+  border-bottom: none;
+}
+
+.p-company__overview-table td {
+  padding: rem(24) rem(16); 
+  border: none; 
+    @include mq("md") {
+      padding: rem(30) rem(36); 
+  }
+}
+
+.p-company__overview-table__left-col {
+  text-align: center;
+  width: 28%; 
+  background-color: #D1DFF7; 
+  box-sizing: border-box;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  font-size: rem(16);
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+   @include mq("md") {
+      width: 23%;
+     font-size: rem(20);
+  }
+}
+
+.p-company__overview-table__left-col br {
+ @include mq("md") {
+     display:none;
+  }
+}
+
+.p-company__overview-table__right-col {
+  width: 72%; 
+  background-color: $white; 
+  box-sizing: border-box;
+  font-size: rem(14);
+  letter-spacing: 0.6px;
+  font-weight: 350;
+   @include mq("md") {
+    width: 77%; 
+     font-size: rem(18);
+  }
+}
+
+.p-company__history--heading {  
+ margin: rem(70) auto rem(32) auto;
+ text-align: center;
+ @include mq("md") {
+    margin: rem(70) auto rem(50) auto;
+}
+}
+
+.p-company__history--box {
+  width: 90%;
+  background-color: $white;
+  padding: rem(20) rem(15);
+  position: relative;
+  z-index: 2;
+  max-width: 940px;
+  margin: 0 auto;
+  @include mq("md") {
+    padding: rem(60);
+}
+}
+.p-company__history--item {
+  margin-bottom: rem(35);
+  @include mq("md") {
+    margin-bottom: rem(50);
+    display: flex;
+}  
+}
+
+.p-company__history--title {
+   font-family: "Noto Serif JP", serif;
+   font-weight: 350;
+   font-size: rem(17);
+    @include mq("md") {
+    width: 31%;
+     font-size: 18px;
+}  
+}
+
+.p-company__history--txt-box {
+  margin-top: rem(12);
+  margin-left: 3rem;
+  display: flex;
+   @include mq("md") {
+    margin: 0;
+     width: 69%;
+  } 
+}
+
+.p-company__history--mon {
+  font-family: "Noto Serif JP", serif;
+   font-weight: 350;
+   font-size: rem(17);
+   width: rem(34);
+     @include mq("md") {
+     font-size: 18px;
+     width: 38px;
+}  
+}
+
+.p-company__history--txt {
+   font-weight: 350;
+   font-size: rem(14);
+   margin-left: rem(20);
+    @include mq("md") {
+     font-size: rem(18);
+     margin-left: rem(47);
+}  
+}
+
+
+/*事業所一覧*/
+.p-company__address {
+  @include mq("md") {
+    padding-bottom: rem(20);
+  }
+}
+
+.p-company__address-box {
+  margin-bottom: rem(64);
+  @include mq("md") {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+  }
+   @include mq("lg") {
+     align-items: end;
+      margin-bottom: rem(80);
+  }
+}
+
+.p-company__address--img {
+    width: 100%;
+   margin-bottom: rem(14);
+     @include mq("md") {
+     width: 43.5%;
+     margin-bottom: 0;
+  }
+}
+
+.p-company__address--detail {
+    @include mq("md") {
+     width: 53%;
+  }
+}
+
+
+.p-company__address--title {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: rem(20);
+  letter-spacing: 0.6px;
+  @include mq("md") {
+     font-size: rem(24);
+  }
+}
+
+
+.p-company__address-table {
+  width: 100%; /* テーブル全体の幅を親要素に合わせる */
+  border-collapse: collapse; 
+  border: 1.5px solid #BDBEC2; 
+  margin: rem(8.5) auto 0 auto;
+  @include mq("md") { 
+  }
+}
+
+.p-company__address-table tr {
+  /* 各行の下部にボーダーを設定 */
+  border-bottom: 1.5px solid $gray300; 
+}
+
+.p-company__address-table td {
+  padding: rem(15); 
+  border: none; 
+    @include mq("md") {
+       padding: rem(18); 
+  }
+}
+
+
+.p-company__address-table__left-col {
+  text-align: center;
+  width: 28%; 
+  background-color: #BDBEC2; 
+  box-sizing: border-box;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  font-size: rem(18);
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+   @include mq("md") {
+     font-size: rem(22);
+  }
+}
+
+.p-company__address-table__right-col {
+  width: 72%; 
+  background-color: $white; 
+  box-sizing: border-box;
+  font-size: rem(16);
+  letter-spacing: 0.6px;
+  font-weight: 350;
+   @include mq("md") {
+  }
+}
+
+.p-company__address-br {
+   @include mq("md") {
+    display: none;
+  }
+}

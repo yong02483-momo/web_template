@@ -1,0 +1,202 @@
+@use "global" as *;
+
+.l-global-menu-hamburger__ul {
+margin-top: rem(35);
+}
+
+.l-global-menu-hamburger {
+  background-color: #FFF;
+  font-size: rem(17);
+  border-bottom: rem(2) solid #d3d3d3;
+  position:relative;
+}
+
+
+.l-global-menu-hamburger__others {
+  display: flex;
+}
+
+.l-global-menu-hamburger__link {
+  width:  100%;
+  padding: rem(9) rem(16);
+  display: flex; 
+  align-items: center;
+}
+
+
+.l-global-menu-hamburger:hover {
+  background-color: #d1dff7;
+  transition-duration: 0.2s;
+}
+
+
+.l-global-menu-hamburger__txt {
+  font-size: rem(18);
+  font-weight: 500;
+  padding-left: rem(18);
+  letter-spacing: 0.4px;
+}
+
+.l-global-menu-hamburger__icon {
+  font-size: rem(28);
+  color: #3862a9;
+  
+}
+
+
+.l-global-menu-hamburger__01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
+  padding: rem(14);
+  color: $white;
+  font-size: rem(16);
+  margin-top: rem(24);
+  width: 100%;
+}
+
+.l-global-menu-hamburger__01--icon {
+  width: rem(20);
+  height: rem(20);
+  margin-right: rem(10);
+}
+
+.l-global-menu-hamburger__01:hover {
+background-color: #6e6e6e;
+transition-duration: 0.2s;
+transition-property: all;;
+}
+
+
+
+.l-global-menu-hamburger__02 {
+  background-color: #000;
+  padding: rem(14);
+  color: $white;
+  font-size: rem(16);
+  text-align: center;
+  margin-top: rem(24);
+  width: 100%;
+}
+
+.l-global-menu-hamburger__02:hover {
+  background-color: #5794ff;
+  transition-property: all;
+  transition-duration: 0.2s;
+  }
+
+.l-global-menu-hamburger__03 {
+    border: 2px solid $black;
+    padding: rem(14);
+    color: $black;
+    font-size: rem(16);
+    text-align: center;
+    margin-top: rem(24);
+    width: 100%;
+  }
+  
+.l-global-menu-hamburger__03:hover {
+    background-color: #d6e6ff;
+    transition-property: all;
+    transition-duration: 0.2s;
+  }
+
+  .l-global-menu-hamburger__03-txt {
+      margin: 0 auto;
+      width: rem(64);
+      position:relative;
+   } 
+
+.l-global-menu-hamburger__03-txt::before {
+      position:absolute;
+      font-family: "Font Awesome 5 Brands";
+      content: '\f16d';
+      color: $black;
+      font-weight: 900;
+      font-size: rem(30);
+      left: rem(-34);
+      
+    }
+    
+    .accordion-toggle {
+      width: 100%;
+    }
+   
+
+//*----------------矢印アイコン--------------
+.l-global-menu-hamburger__txt--aco::before  {
+    content: '';
+    position: absolute;
+    right: rem(20); 
+    top: 50%;
+    transform: translateY(-50%); 
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: rem(16) rem(12) 0 rem(12); 
+    border-color: #a1a1a1 transparent transparent transparent;   
+    transition: transform 0.3s ease;
+    z-index: 2;
+    //SP版
+    @media (max-width: 768px) {
+        right: 20px; 
+    }
+}
+
+/* 開いた状態: .is-open クラスが付与されたとき */
+ .l-global-menu-hamburger.active .l-global-menu-hamburger__txt--aco::before  {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+
+
+
+//*---------------アコーディオン設定--------------
+
+  .l-global-menu-hamburger__ul,
+  .l-global-menu-hamburger__aco {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .l-global-menu-hamburger__link,
+  .l-global-menu-hamburger__aco--link {
+    color: black;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .l-global-menu-hamburger__aco--link {
+    display: block;
+  }
+
+  .l-global-menu-hamburger__aco {
+    display: none;
+    overflow: hidden;   
+  }
+
+//アコーディオンが開いている間は、背景色をつける
+  .l-global-menu-hamburger.active .l-global-menu-hamburger__link {
+    background-color: #d1dff7;
+  } 
+
+  .l-global-menu-hamburger__aco--link {
+    font-size: rem(18);
+     font-weight: 500;
+    padding: rem(18) rem(12) rem(18) rem(34);
+    background-color: #f2f6fc;
+    border-bottom: 0.125rem solid #d1d5f1;
+  }
+    
+  .l-global-menu-hamburger__aco--link:hover {
+    background-color: #deebff;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+  }
+
+  .l-global-menu-hamburger__logo {
+    width: rem(200);
+    margin: rem(38) auto rem(20) auto;
+    
+  }

@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.c-treat-text {
+  display: inline-block;
+  background: linear-gradient(180deg, #70819F 0%, #5493F1 100%);
+  background: -webkit-linear-gradient(180deg, #70819F 0%,#5493F1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 440;
+}

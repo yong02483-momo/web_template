@@ -1,0 +1,243 @@
+@use "global" as *;
+
+.p-contact-main {
+  background-color: $gray100;
+}
+
+.p-contact__top-txt {
+   text-align: center;
+   padding-bottom: rem(40);
+   font-size: $p3;
+   @include mq("md") {
+      padding-bottom: rem(68);
+       font-size: $p2;
+   }   
+}
+
+
+
+.p-contact__form {
+  margin-top: 3rem;
+  background-color: $gray100;
+  padding-bottom: rem(80);
+@include mq("md") { 
+    margin-top: 6rem;
+    padding-bottom: rem(170);
+  }
+}
+
+
+.p-contact__form__box {
+  margin: 0 auto;
+  background-color: $white;
+  padding: rem(40) rem(20) rem(50) rem(20);
+@include mq("md"){
+
+    max-width: 800px;
+    padding: rem(44) rem(50) rem(90) rem(50);
+  }
+}
+
+.p-contact__form__item {
+  border-bottom: .1rem solid #ffffff;
+  padding: rem(20) 0;
+@include mq("md") {
+  }
+}
+
+.p-contact-naiyou {
+  @include mq("md") {
+    margin-right: 6rem;
+  }
+}
+
+.p-contact-naiyou:last-child {
+  @include mq("md") {
+      margin-right: 0rem; 
+}
+}
+
+
+
+.p-contact__form-ttl {
+  font-weight: 500;
+  font-size: $p2;
+  display: block;
+  margin-bottom: rem(18);
+}
+
+.p-contact__form-req:after {
+  content: '必須';
+  background-color: $red;
+  color: $white;
+  font-size: rem(14);
+  margin-left: rem(18);
+  padding: rem(2) rem(10) ;
+}
+
+
+.p-contact__select-wrapper {
+  position: relative; /* ::after の配置基準となる */
+  width: 100%; 
+  overflow: hidden; /* カスタム矢印がはみ出さないように */
+  border-radius: rem(5); 
+  background-color: #ffffff; 
+  border: 1.5px solid #BDBEC2;
+}
+
+.p-contact__select {
+  width: 100%;
+  padding: rem(13) rem(16);
+  font-size: rem(16);
+  color: $black; 
+  padding-right: rem(40); 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Safariなどでのデフォルトの矢印の余白をなくす（任意） */
+  padding-inline-end: 0; 
+  text-indent: 0.01px; /* Firefoxでの選択肢のテキストが消える問題を回避 */
+  text-overflow: ""; /* Safariでのテキスト切り捨てを防ぐ */
+  
+  @include mq("md") {
+    font-size: rem(18);
+  }
+}
+
+/* 矢印アイコン */
+.p-contact__select-wrapper::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   right: rem(30);
+   width: rem(10);
+   height: rem(10);
+   
+   border-left: 2px solid $black;
+   border-top: 2px solid $black;
+
+   transform: translateY(-50%) rotate(225deg); 
+                                        
+   pointer-events: none;
+   z-index: 1; 
+}
+
+
+
+.p-contact__form__text {
+  width: 100%;
+  border: 1.5px solid #BDBEC2;
+  border-radius: rem(5);
+  background-color: #ffffff;
+  padding: rem(13) rem(16) ;
+  font-size: rem(16);
+    @include mq("md") {
+    font-size: 17px;
+  }
+}
+
+.p-contact__form__text::placeholder {
+  color: #c0c0c0;
+}
+
+.p-contact__form__detail {
+  width: 100%;
+  max-width: 67rem;
+  padding: rem(13) rem(16);
+  background-color: $white;
+  border: 1.5px solid #BDBEC2;
+  border-radius: rem(5);
+  font-size: rem(16);
+    @include mq("md") {
+    font-size: 17px;
+  }
+}
+
+.p-contact__form__detail::placeholder {
+  color: #c0c0c0;
+}
+
+
+
+.p-top__contact--btn .c-btn__style-04 {
+   padding: rem(12) rem(110);
+   font-size: rem(16);
+   @include mq("md") {
+     padding: rem(12) rem(125);   
+       font-size: 17px;
+}
+}
+
+.p-top__contact--btn {
+  margin: rem(14) auto 0 auto;
+  width: fit-content;
+   @include mq("md") {
+    margin: rem(50) auto 0 auto;
+  }
+}
+
+
+ /*ここから送信完了ページ　スタイル*/
+
+.p-contact__thanks-heading {
+  color: $primary;
+  padding-bottom: rem(32);
+  margin: 0 auto;
+  width: fit-content;
+    @include mq("md") {
+      padding-bottom: rem(90);
+}
+}
+
+.p-top__contact-thanks--btn .c-btn__style-04 {
+   padding: rem(12) rem(80);
+   font-size: rem(16);
+   @include mq("md") {
+     padding: rem(12) rem(125);   
+       font-size: 17px;
+ }
+}
+
+.p-contact__thanks-txt {
+  font-size: $p3;
+   @include mq("md") {
+     font-size: $p2;
+  }
+}
+
+.p-top__contact-thanks--btn {
+  margin: rem(60) auto 0 auto;
+  width: fit-content;
+   @include mq("md") {
+    margin: rem(100) auto 0 auto;
+  }
+}
+
+
+
+
+
+
+
+/*　 ↓　不要？　
+.p-contact-naiyou {
+
+}
+
+@include mq("md") {
+  .p-contact-naiyou {
+    margin-right: 6rem;
+  }
+}
+
+.p-contact-naiyou:last-child {
+
+}
+
+@include mq("md") {
+  .p-contact-naiyou:last-child {
+    margin-right: rem; 
+}
+
+*/

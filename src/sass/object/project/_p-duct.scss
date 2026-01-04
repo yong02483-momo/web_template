@@ -1,0 +1,215 @@
+@use "global" as *;
+
+
+.p-duct__case {
+  padding-bottom: rem(40);
+   @include mq("md") {
+     padding-bottom: rem(100);
+  }
+}
+
+.p-duct__case-container {
+ @include mq("md") {
+     display: flex;
+     flex-wrap:wrap;
+     justify-content: space-between;
+   }
+}
+
+.p-duct__case-item {
+  position: relative;
+  max-height: 277px;
+  max-width: 480px;
+  overflow: hidden;
+  width: 100%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem auto;
+    @include mq("md") {  
+    width: 49%;
+    max-height: 379px;
+    max-width: 547px;
+    margin:0 0 rem(60) 0;
+  }
+}
+
+.p-duct__case-item--img {
+  width: 100%;
+}
+
+
+.p-duct__case-item--txt {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  padding: rem(13) rem(60);
+  background-color: $white;
+  font-size: rem(16);
+   @include mq("md") {  
+   font-size: rem(18);
+  }
+}
+
+
+//作業工程
+.p-duct__process-container {
+  margin-bottom: rem(68);
+  background-color: $white;
+  padding: rem(16) ;
+    @include mq("md") {
+      margin-bottom: rem(20);
+      background-color: $gray300;
+      padding: 0;
+  }
+
+}
+
+.p-duct__process-heading {
+  display: flex;
+  align-items: center;
+}
+
+.p-duct__process-num {
+ font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: rem(40);
+  letter-spacing: 0.6px;
+  display: inline;
+  margin-bottom: 16px;
+  @include mq("md") {
+    font-size: rem(48);
+    margin-bottom: 8px;
+  }
+}
+
+.p-duct__process-title {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  font-size: rem(20);
+  letter-spacing: 0.6px;
+  display: inline;
+  padding-left: rem(8);
+    @include mq("md") {
+    font-size: rem(32);
+      padding-left: rem(12);
+  }
+}
+
+.p-duct__process-txt {
+  font-size: $p3;
+  margin: rem(11) 0 rem(27) 0;
+   @include mq("md") {
+   margin: rem(23) 0 rem(30) 0;
+  }
+}
+
+.p-duct__process-box {
+   @include mq("md") {
+   display: flex;
+     flex-wrap:wrap;
+     justify-content: space-between;
+  }
+}
+
+
+.p-duct__process-img {
+  margin-bottom: rem(20);
+   @include mq("md") {  
+    margin-bottom: 0;
+    width: 49%;
+    height: rem(380);
+  }
+}
+
+.p-duct__process-machine {
+ @include mq("md") {  
+    width: 49%;
+  }
+}
+
+.p-duct__process-machine--name {
+  position: relative;
+}
+
+.p-duct__machine-name {
+   position: absolute;
+  right: 0%;
+  bottom: 0%;
+  padding: rem(13) rem(60);
+  background-color: $white;
+  font-size: rem(16);
+   @include mq("md") {  
+   font-size: rem(18);
+  }
+}
+
+.p-duct__machine-img {
+   @include mq("md") {  
+    width: 100%;
+    height: rem(380);
+  }
+}
+
+
+
+//製品一覧
+.p-duct__product--heading {
+   text-align: center;
+   padding: rem(30) 0 rem(40) 0;
+   @include mq("md") {
+   font-size: rem(100); 
+  padding: rem(30) 0 rem(85) 0;
+}
+  }
+
+.p-duct__product--treat {
+  display: inline-block;
+  letter-spacing: 0.4px;
+  text-align: center;
+  font-size: rem(65);
+  @include mq("md") {
+   font-size: rem(100); 
+}
+}
+
+.p-duct__product-box {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+
+.p-duct__product-item {
+  aspect-ratio: 257 / 240;
+  width: 48%;
+  position: relative;
+  box-shadow : 0px 4px 5px rgba(0,0,0, 0.25);
+  margin-bottom: rem(25);
+   @include mq("md") {
+   font-size: rem(100); 
+   width: 23%;
+   margin-bottom: rem(40);
+}
+}
+
+.p-duct__product-name {
+    background-color: #fff;
+    bottom: 0%;
+    font-size: rem(16);
+    padding: 0.8125rem;
+    position: absolute; 
+    width: 100%;
+    text-align: center;
+   @include mq("md") {  
+   font-size: rem(17);
+  }
+}
+
+.p-duct--btn {
+  margin-top: rem(60) ;
+  width: fit-content;
+  margin-left: auto;
+  margin-bottom: rem(84);
+   @include mq("md") {
+    margin-top: rem(50) ;
+    margin-bottom: rem(100);
+  }
+}

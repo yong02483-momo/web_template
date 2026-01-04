@@ -1,0 +1,125 @@
+@use "global" as *;
+
+.c-fv {
+  position: relative;
+}
+
+/* FVの枠の高さ設定　*/
+
+.c-fv  {
+  width: 100%;
+  height: rem(270);
+  overflow: hidden;
+  background-color: #636363;
+  @include mq("sm") {
+    height: auto;
+    aspect-ratio: 1440 / 411; 
+}
+@include mq("xl") {
+   aspect-ratio: 1440 / 358; 
+}
+}
+
+.c-fv__img {
+    @include mq("sm") {
+      width: 100%; 
+      height: auto;
+      transform: none;
+      object-position: center;
+    }
+}
+
+.c-fv__img--information {
+  display: block;
+  transform: scale(2.94) translateY(32px); 
+}
+
+.c-fv__img--duct {
+  display: block;
+  transform: scale(2.8) translateX(-97px) translateY(32px);
+}
+
+.c-fv__img--contact {
+  display: block;
+  transform: scale(2.6) translateX(98px) translateY(31px);
+}
+
+.c-fv__img--company {
+   display: block;
+  transform: scale(2.6) translateX(-50px) translateY(31px);
+}
+
+.c-fv__img--recruit {
+  display: block;
+  transform: scale(2.8) translateX(5px) translateY(28px);
+}
+
+.c-fv__img.c-fv__img--recruit {
+    @include mq("sm") {
+       display: block;
+      transform: scale(1.2) translateY(-14px);
+    }
+    @include mq("xl") {
+       display: block;
+      transform: scale(1.1) translateY(-54px);
+}
+}
+
+/*FVに半透明の乗算レイヤー */
+.c-fv::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* 半透明の黒 */
+  mix-blend-mode: multiply;
+}
+
+.c-fv__fv-text {
+ position: absolute;
+ z-index: 4;
+ top: 40%;
+ color: $white;
+ margin-left: 5%;
+ @include mq("md") {
+  top: 36%;
+  margin-left: 16%;
+}
+}
+
+.c-fv__fv-text--h2{
+  margin-top: rem(24);
+  letter-spacing: rem(2);
+  text-shadow: 3px 2px 10px #000000;
+@include mq("sm") {
+  font-size: rem(32);
+}
+}
+
+
+.c-fv_headingarea {
+   padding-bottom: rem(40);
+   @include mq("md") {
+      padding-bottom: rem(70);
+   }
+}
+
+.c-fv_headingarea--title {
+  width:fit-content;
+  margin: 0 auto;
+  @include mq("md") {
+  margin-left: 0;
+  }
+}
+
+.c-fv_headingarea--text {
+   font-size: $p3;
+   padding-top: rem(27);
+   @include mq("md") {
+      font-size: $p2;
+      padding-top: rem(29);
+  }
+}

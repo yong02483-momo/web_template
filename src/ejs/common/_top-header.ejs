@@ -1,0 +1,174 @@
+<div class="l-header">
+  <div class="l-header-back">
+  <nav class="l-global-menu">
+    <!-- トップページのロゴ -->
+    <a href="/" class="l-global-menu__logo">
+        <img class="c-logo" src="./images/common/tiida-logo.png" alt="ロゴ" />
+      </a>
+
+    <!------pc版ナビゲーション (スマホ版では非表示) ------>
+    <div class="l-global-menu__pc">
+      <div id="js-global-menu-fixed" class="l-global-menu-fixed">
+
+        <ul class="l-global-menu-item__container">
+          <li class="l-global-menu-item">
+            <a href="/" class="l-global-menu-item__link">ホーム</a>
+          </li>
+          <li class="l-global-menu-item">
+            <div class="l-global-menu-drop">
+            <div class="l-global-menu-item__link l-global-menu-drop__txt">事業案内</div>
+             <ul class="l-global-menu__dropdown">
+               <li class="l-global-menu__dropdown--item"><a href="duct.html">ダクト制作・取付事業</a></li>
+               <li class="l-global-menu__dropdown--item"><a href="hotel.html">ホテルトータル<br>サポート事業</a></li>
+               <li class="l-global-menu__dropdown--item"><a href="#">不動産管理事業</a></li>
+               <li class="l-global-menu__dropdown--item"><a href="#">コンテナ事業</a></li>
+               </ul>
+              </div>
+          </li>
+          <li class="l-global-menu-item">
+            <a href="recruit.html" class="l-global-menu-item__link">採用情報</a>
+          </li>
+          <li class="l-global-menu-item">
+            <a href="company.html" class="l-global-menu-item__link">会社概要</a>
+          </li>
+          <li class="l-global-menu-item">
+            <a href="information.html" class="l-global-menu-item__link">お知らせ</a>
+          </li>
+          <li class="l-global-menu-item__02">
+            <a href="contact.html">問い合わせる</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    
+
+
+
+
+
+    <!-- ハンバーガーメニュー -->
+    
+    <div class="l-global-menu__hamburger" >
+    <div class="l-hamburger" id="js-hamburger">
+      <div class="btn-trigger btn01">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div> 
+  
+    <div id="js-drower" class="l-drower l-drower inner">
+    <div id="l-drower__container" class="l-drower__container">
+      <div class="l-global-menu__hamburger">
+      </div>
+      <ul class="l-global-menu-hamburger__ul">
+       <li class="l-global-menu-hamburger">
+             <a href="/" class="l-global-menu-hamburger__link">
+                <i class="bi bi-door-open-fill l-global-menu-hamburger__icon"></i>
+                <div class="l-global-menu-hamburger__txt">ログイン</div>
+             </a>
+       </li>
+       <li class="l-global-menu-hamburger">
+             <a href="info_list.html" class="l-global-menu-hamburger__link">
+                <i class="bi bi-bell-fill l-global-menu-hamburger__icon"></i>
+                <div class="l-global-menu-hamburger__txt">お知らせ</div>
+             </a>
+       </li>
+        <li class="l-global-menu-hamburger">
+             <a href="#" class="l-global-menu-hamburger__link accordion-toggle"> 
+             <i class="bi  bi-clock l-global-menu-hamburger__icon"></i>
+                        <div class="l-global-menu-hamburger__txt l-global-menu-hamburger__txt--aco">出退勤</div>
+              </a>
+                    
+                    <ul class="l-global-menu-hamburger__aco"> 
+                        <li class="l-global-menu-hamburger__aco--item">
+                            <a href="attendance_input.html" class="l-global-menu-hamburger__aco--link">出勤・退勤打刻</a>
+                        </li>
+                        <li class="l-global-menu-hamburger__aco--item">
+                            <a href="attendance_qr.html" class="l-global-menu-hamburger__aco--link">出勤・退勤打刻（QR対応）</a>
+                        </li>
+                        <li class="l-global-menu-hamburger__aco--item" >
+                            <a href="attendance_list.html" class="l-global-menu-hamburger__aco--link">出退勤閲覧</a>
+                        </li>
+                     </ul>
+        </li>
+         <li class="l-global-menu-hamburger">
+             <a href="#" class="l-global-menu-hamburger__link accordion-toggle"> 
+             <i class="bi bi-car-front-fill l-global-menu-hamburger__icon"></i>
+                        <div class="l-global-menu-hamburger__txt l-global-menu-hamburger__txt--aco">車両申請</div>
+              </a>
+                    
+                    <ul class="l-global-menu-hamburger__aco"> 
+                        <li class="l-global-menu-hamburger__aco--item">
+                            <a href="car_request.html" class="l-global-menu-hamburger__aco--link">使用車両申請</a>
+                        </li>
+                        <li class="l-global-menu-hamburger__aco--item">
+                            <a href="car_list.html" class="l-global-menu-hamburger__aco--link">車両申請一覧</a>
+                        </li>
+                     </ul>
+        </li> 
+        <li class="l-global-menu-hamburger">
+             <a href="#" class="l-global-menu-hamburger__link accordion-toggle"> 
+             <i class="bi bi-luggage-fill l-global-menu-hamburger__icon"></i>
+                        <div class="l-global-menu-hamburger__txt l-global-menu-hamburger__txt--aco">有給申請</div>
+              </a>
+                    
+                    <ul class="l-global-menu-hamburger__aco"> 
+                        <li class="l-global-menu-hamburger__aco--item">
+                            <a href="paid_request.html" class="l-global-menu-hamburger__aco--link">有給申請</a>
+                        </li>
+                        <li class="l-global-menu-hamburger__aco--item">
+                            <a href="paid_list.html" class="l-global-menu-hamburger__aco--link">有給申請一覧</a>
+                        </li>
+                     </ul>
+        </li> 
+         </li> 
+        <li class="l-global-menu-hamburger">
+             <a href="#" class="l-global-menu-hamburger__link accordion-toggle"> 
+             <i class="bi bi-cash-stack l-global-menu-hamburger__icon"></i>
+                        <div class="l-global-menu-hamburger__txt l-global-menu-hamburger__txt--aco">経費申請</div>
+              </a>
+                    
+                    <ul class="l-global-menu-hamburger__aco"> 
+                        <li class="l-global-menu-hamburger__aco--item">
+                            <a href="expenses_request.html" class="l-global-menu-hamburger__aco--link">経費申請</a>
+                        </li>
+                        <li class="l-global-menu-hamburger__aco--item">
+                            <a href="expenses_list.html" class="l-global-menu-hamburger__aco--link">経費申請一覧</a>
+                        </li>
+                     </ul>
+        </li> 
+         <li class="l-global-menu-hamburger">
+             <a href="stuff_edit.html" class="l-global-menu-hamburger__link">
+                <i class="bi bi-person-fill l-global-menu-hamburger__icon"></i>
+                <div class="l-global-menu-hamburger__txt">従業員情報</div>
+             </a>
+        </li>
+
+     
+        <li class="l-global-menu-hamburger__others">
+          <a href="tel:0988808766" class="l-global-menu-hamburger__01">
+            <div class="l-global-menu-hamburger__01--icon">
+              <img src="./images/common/icon/tel.png" alt="電話アイコン" /></div> 
+           <div class="l-global-menu-hamburger__01--txt">  電話で問い合わせる</div>
+        </a>
+       </li>
+        <li class="l-global-menu-hamburger__others">
+          <a href="contact.html" class="l-global-menu-hamburger__02">
+        問い合わせる
+        </a>
+       </li>
+        <li class="l-global-menu-hamburger__others">
+          <a href="/" class="l-global-menu-hamburger__03">
+            <p class="l-global-menu-hamburger__03-txt">Instagram</p>
+          </a>
+        </li>
+        </ul>
+        <img class="l-global-menu-hamburger__logo" src="./images/common/tiida-logo.png" alt="ロゴ" />
+    </div>
+   </div>
+</nav>
+</div>
+</div>
+

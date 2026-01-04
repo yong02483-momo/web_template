@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.l-header-back {
+  width: 100%;
+  z-index: 20;
+  background: rgba(255,255,255,0);
+  position: fixed;
+  border-bottom: 1px solid $white;
+}
+
+.l-header-back.scrolled {
+  background-color: $white;
+  box-shadow: 0 0 8px gray;
+  transition-duration: 0.4s;
+}

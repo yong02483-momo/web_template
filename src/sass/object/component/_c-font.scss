@@ -1,0 +1,44 @@
+@use "global" as *;
+
+/*フォント毎のサイズ設定*/
+
+.c-font__h2 {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: rem(25);
+  letter-spacing: 0.6px;
+  @include mq("md") {
+    font-size: rem(44);
+  }
+}
+
+.c-font__h3 {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: rem(22);
+  letter-spacing: 0.6px;
+  @include mq("md") {
+    font-size: rem(38);
+  }
+}
+
+.c-font__h4 {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: rem(19);
+  letter-spacing: 0.6px;
+  @include mq("md") {
+    font-size: rem(32);
+  }
+}
+
+.c-font__h5 {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: rem(16);
+  letter-spacing: 0.6px;
+  @include mq("md") {
+    font-size: rem(24);
+  }
+}
+

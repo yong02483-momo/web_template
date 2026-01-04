@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="robots" content="noindex" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <title>tiidaネットチーム開発</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <meta name="twitter:card" content="summary" />
+  <!--Fontawasome・Lineawasome-->
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <!-- Googleフォント-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <!-- ファビコン -->
+  <link rel="icon" href="#" />
+  <!-- css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <div class="l-header">
+    <div class="l-header-back">
+      <nav class="l-global-menu">
+        <!-- トップページのロゴ -->
+        <a href="/" class="l-global-menu__logo">
+          <img class="c-logo" src="./images/common/tiida-logo.png" alt="ロゴ" />
+        </a>
+        <!------pc版ナビゲーション (スマホ版では非表示) ------>
+        <div class="l-global-menu__pc">
+          <div id="js-global-menu-fixed" class="l-global-menu-fixed">
+            <ul class="l-global-menu-item__container">
+              <li class="l-global-menu-item">
+                <a href="/" class="l-global-menu-item__link">ホーム</a>
+              </li>
+              <li class="l-global-menu-item">
+                <div class="l-global-menu-drop">
+                  <div class="l-global-menu-item__link l-global-menu-drop__txt">事業案内</div>
+                  <ul class="l-global-menu__dropdown">
+                    <li class="l-global-menu__dropdown--item"><a href="duct.html">ダクト制作・取付事業</a></li>
+                    <li class="l-global-menu__dropdown--item"><a href="hotel.html">ホテルトータル<br>サポート事業</a></li>
+                    <li class="l-global-menu__dropdown--item"><a href="#">不動産管理事業</a></li>
+                    <li class="l-global-menu__dropdown--item"><a href="#">コンテナ事業</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="l-global-menu-item">
+                <a href="recruit.html" class="l-global-menu-item__link">採用情報</a>
+              </li>
+              <li class="l-global-menu-item">
+                <a href="company.html" class="l-global-menu-item__link">会社概要</a>
+              </li>
+              <li class="l-global-menu-item">
+                <a href="information.html" class="l-global-menu-item__link">お知らせ</a>
+              </li>
+              <li class="l-global-menu-item__02">
+                <a href="contact.html">問い合わせる</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- ハンバーガーメニュー -->
+        <div class="l-global-menu__hamburger">
+          <div class="l-hamburger" id="js-hamburger">
+            <div class="btn-trigger btn01">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div id="js-drower" class="l-drower l-drower inner">
+          <div id="l-drower__container" class="l-drower__container">
+            <div class="l-global-menu__hamburger">
+            </div>
+            <ul class="l-global-menu-hamburger__ul">
+              <li class="l-global-menu-hamburger">
+                <a href="/" class="l-global-menu-hamburger__link">
+                  <i class="bi bi-door-open-fill l-global-menu-hamburger__icon"></i>
+                  <div class="l-global-menu-hamburger__txt">ログイン</div>
+                </a>
+              </li>
+              <li class="l-global-menu-hamburger">
+                <a href="info_list.html" class="l-global-menu-hamburger__link">
+                  <i class="bi bi-bell-fill l-global-menu-hamburger__icon"></i>
+                  <div class="l-global-menu-hamburger__txt">お知らせ</div>
+                </a>
+              </li>
+              <li class="l-global-menu-hamburger">
+                <a href="#" class="l-global-menu-hamburger__link accordion-toggle">
+                  <i class="bi  bi-clock l-global-menu-hamburger__icon"></i>
+                  <div class="l-global-menu-hamburger__txt l-global-menu-hamburger__txt--aco">出退勤</div>
+                </a>
+                <ul class="l-global-menu-hamburger__aco">
+                  <li class="l-global-menu-hamburger__aco--item">
+                    <a href="attendance_input.html" class="l-global-menu-hamburger__aco--link">出勤・退勤打刻</a>
+                  </li>
+                  <li class="l-global-menu-hamburger__aco--item">
+                    <a href="attendance_qr.html" class="l-global-menu-hamburger__aco--link">出勤・退勤打刻（QR対応）</a>
+                  </li>
+                  <li class="l-global-menu-hamburger__aco--item">
+                    <a href="attendance_list.html" class="l-global-menu-hamburger__aco--link">出退勤閲覧</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="l-global-menu-hamburger">
+                <a href="#" class="l-global-menu-hamburger__link accordion-toggle">
+                  <i class="bi bi-car-front-fill l-global-menu-hamburger__icon"></i>
+                  <div class="l-global-menu-hamburger__txt l-global-menu-hamburger__txt--aco">車両申請</div>
+                </a>
+                <ul class="l-global-menu-hamburger__aco">
+                  <li class="l-global-menu-hamburger__aco--item">
+                    <a href="car_request.html" class="l-global-menu-hamburger__aco--link">使用車両申請</a>
+                  </li>
+                  <li class="l-global-menu-hamburger__aco--item">
+                    <a href="car_list.html" class="l-global-menu-hamburger__aco--link">車両申請一覧</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="l-global-menu-hamburger">
+                <a href="#" class="l-global-menu-hamburger__link accordion-toggle">
+                  <i class="bi bi-luggage-fill l-global-menu-hamburger__icon"></i>
+                  <div class="l-global-menu-hamburger__txt l-global-menu-hamburger__txt--aco">有給申請</div>
+                </a>
+                <ul class="l-global-menu-hamburger__aco">
+                  <li class="l-global-menu-hamburger__aco--item">
+                    <a href="paid_request.html" class="l-global-menu-hamburger__aco--link">有給申請</a>
+                  </li>
+                  <li class="l-global-menu-hamburger__aco--item">
+                    <a href="paid_list.html" class="l-global-menu-hamburger__aco--link">有給申請一覧</a>
+                  </li>
+                </ul>
+              </li>
+              </li>
+              <li class="l-global-menu-hamburger">
+                <a href="#" class="l-global-menu-hamburger__link accordion-toggle">
+                  <i class="bi bi-cash-stack l-global-menu-hamburger__icon"></i>
+                  <div class="l-global-menu-hamburger__txt l-global-menu-hamburger__txt--aco">経費申請</div>
+                </a>
+                <ul class="l-global-menu-hamburger__aco">
+                  <li class="l-global-menu-hamburger__aco--item">
+                    <a href="expenses_request.html" class="l-global-menu-hamburger__aco--link">経費申請</a>
+                  </li>
+                  <li class="l-global-menu-hamburger__aco--item">
+                    <a href="expenses_list.html" class="l-global-menu-hamburger__aco--link">経費申請一覧</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="l-global-menu-hamburger">
+                <a href="stuff_edit.html" class="l-global-menu-hamburger__link">
+                  <i class="bi bi-person-fill l-global-menu-hamburger__icon"></i>
+                  <div class="l-global-menu-hamburger__txt">従業員情報</div>
+                </a>
+              </li>
+              <li class="l-global-menu-hamburger__others">
+                <a href="tel:0988808766" class="l-global-menu-hamburger__01">
+                  <div class="l-global-menu-hamburger__01--icon">
+                    <img src="./images/common/icon/tel.png" alt="電話アイコン" />
+                  </div>
+                  <div class="l-global-menu-hamburger__01--txt"> 電話で問い合わせる</div>
+                </a>
+              </li>
+              <li class="l-global-menu-hamburger__others">
+                <a href="contact.html" class="l-global-menu-hamburger__02"> 問い合わせる </a>
+              </li>
+              <li class="l-global-menu-hamburger__others">
+                <a href="/" class="l-global-menu-hamburger__03">
+                  <p class="l-global-menu-hamburger__03-txt">Instagram</p>
+                </a>
+              </li>
+            </ul>
+            <img class="l-global-menu-hamburger__logo" src="./images/common/tiida-logo.png" alt="ロゴ" />
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <main>
+    <a name="top"></a>
+    <div class="c-fv">
+      <img class="c-fv__img c-fv__img--company" src="./images/common/company/company_fv.jpg" alt="topic">
+      <div class="c-fv__fv-text">
+        <h2 class="c-font__h2 c-fv__fv-text--h2">会社概要 </h2>
+      </div>
+    </div>
+    <!--固定ヘッダーの背景色変更地点-->
+    <div class="target"></div>
+    <!--パンくず-->
+    <nav>
+      <ol class="c-breadcrumbs">
+        <li class="c-breadcrumbs__blue"><a href="/">HOME</a></li>
+        <li>会社概要 </li>
+      </ol>
+    </nav>
+    <section class="p-company__philosophy">
+      <div class="p-company__philosophy-container">
+        <p class="p-company__txt--back c-treat-text">Company</p>
+        <div class="p-company__philosophy--bg">
+          <img src="./images/common/company/back_01.jpg" alt="企業理念背景">
+        </div>
+        <div class="p-company__philosophy--box01">
+          <h3 class="p-company__philosophy--heading c-font__h3">企業理念 </h3>
+          <h5 class="p-company__philosophy--txt 
+           c-font__h5"> 企業理念が入ります。企業理念が入ります。企業理念が入ります。企業理念が入ります。企業理念が入ります。<br>
+            <br> 01.企業理念が入ります。企業理念が入ります。企業理念が入ります。<br>
+            <br> 02.企業理念が入ります。企業理念が入ります。企業理念が入ります。<br>
+            <br> 03.企業理念が入ります。企業理念が入ります。企業理念が入ります。
+          </h5>
+        </div>
+        <div class="p-company__philosophy--box02">
+          <h3 class="p-company__philosophy--heading c-font__h3">代表メッセージ </h3>
+          <div class="p-company__philosophy-box02--content">
+            <div class="p-company__philosophy-box02--img">
+              <img src="./images/common/top/service_rent.jpg" alt="代表メッセージ画像">
+            </div>
+            <div class="p-company__philosophy-box02--txt">
+              <p class="p-company__philosophy--message">2005年（平成17年）11月に個人事業「ゼンショウ」輸入卸事業からはじまり、2007年（平成19年）より「株式会社ゼンショウトレーディング」設立。現在は海外商品開発、コンテナの販売・修理・リース、ホテルのアメニティやリネンなど幅広く運営しております。<br>また、 今年度はホテル事業にもご縁があり、リネン関係からホテル事業まで展開していく形となりました。<br>ホームページの立ち上げとともに、新たな事業展開へと発展していくとともに、お世話になっている企業様へのさらなるニーズに応えるべく、社員一同団結し進んでまいります。 </p>
+              <p class="p-company__philosophy--name"> 株式会社&emsp;ゼンショウトレーディング<br> 代表執行役&emsp;金城&nbsp;淳</p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="p-company__overview">
+      <div class="p-company__overview-bg-image"></div>
+      <div class="p-company__overview--heading">
+        <div class="p-company__overview--treat c-treat-text">Overview</div>
+        <div class="p-company__overview--title c-font__h3">会社概要</div>
+      </div>
+      <table class="p-company__overview-table">
+        <tr>
+          <td class="p-company__overview-table__left-col">商号</td>
+          <td class="p-company__overview-table__right-col">株式会社&emsp;ゼンショウトレーディング</td>
+        </tr>
+        <tr>
+          <td class="p-company__overview-table__left-col">設立</td>
+          <td class="p-company__overview-table__right-col">２００７年（平成１９年）&nbsp;７月２６日</td>
+        </tr>
+        <tr>
+          <td class="p-company__overview-table__left-col">本社</td>
+          <td class="p-company__overview-table__right-col">〒901-0303<br> 沖縄県糸満市字兼城348番地の1<br> TEL.098-992-4073</td>
+        </tr>
+        <tr>
+          <td class="p-company__overview-table__left-col">代表<br>取締役</td>
+          <td class="p-company__overview-table__right-col">金城&nbsp;淳 &nbsp;（きんじょう&nbsp;あつし）</td>
+        </tr>
+        <tr>
+          <td class="p-company__overview-table__left-col">資本金</td>
+          <td class="p-company__overview-table__right-col">300万円</td>
+        <tr>
+          <td class="p-company__overview-table__left-col">主な<br>取引銀行</td>
+          <td class="p-company__overview-table__right-col">海邦銀行・琉球銀行・沖縄銀行・JAおきなわ</td>
+        </tr>
+        <tr>
+          <td class="p-company__overview-table__left-col">従業員数</td>
+          <td class="p-company__overview-table__right-col">10名</td>
+        </tr>
+        <tr>
+          <td class="p-company__overview-table__left-col">業務内容</td>
+          <td class="p-company__overview-table__right-col"> 【海上用コンテナのレンタル・販売・修理・製作】<br> ・新品・再生品・各種サイズコンテナ取り扱い<br> ・オーダーメイド特殊コンテナの製作<br> ・事務所等のハウスコンテナの製作<br> ・コンテナに関する各種業務<br>
+            <br> 【その他業務内容】<br> ・海外商品開発、輸入卸、販売<br> ・物流事業部<br> ・ホテル用品、アメニティ製造、販売<br> ・ペット用品輸入卸、販売<br> ・不動産賃貸、管理<br>
+          </td>
+        </tr>
+        </tr>
+      </table>
+      <div class="p-company__history--heading c-font__h3">沿革</div>
+      <div class="p-company__history--box">
+        <div class="p-company__history--item">
+          <div class="p-company__history--title c-heading-treat__circle"> 2005年（平成17年） </div>
+          <div class="p-company__history--txt-box">
+            <div class="p-company__history--mon"> 11月 </div>
+            <div class="p-company__history--txt"> 個人事業ゼンショウを開始<br>海外輸入事業を開始 </div>
+          </div>
+        </div>
+        <div class="p-company__history--item">
+          <div class="p-company__history--title c-heading-treat__circle"> 2007年（平成19年） </div>
+          <div class="p-company__history--txt-box">
+            <div class="p-company__history--mon">
+            </div>
+            <div class="p-company__history--txt"> 株式会社ゼンショウトレーディング設立 </div>
+          </div>
+        </div>
+        <div class="p-company__history--item">
+          <div class="p-company__history--title c-heading-treat__circle"> 2010年（平成22年） </div>
+          <div class="p-company__history--txt-box">
+            <div class="p-company__history--mon">
+            </div>
+            <div class="p-company__history--txt"> 不動産事業部開始 </div>
+          </div>
+        </div>
+        <div class="p-company__history--item">
+          <div class="p-company__history--title c-heading-treat__circle"> 2016年（平成28年） </div>
+          <div class="p-company__history--txt-box">
+            <div class="p-company__history--mon">
+            </div>
+            <div class="p-company__history--txt"> コンテナ物流事業開始 </div>
+          </div>
+        </div>
+        <div class="p-company__history--item">
+          <div class="p-company__history--title c-heading-treat__circle"> 2017年（平成29年） </div>
+          <div class="p-company__history--txt-box">
+            <div class="p-company__history--mon">
+            </div>
+            <div class="p-company__history--txt"> 西崎事業部設立<br> リネン事業開始<br> Webマーケティング事業部設立 </div>
+          </div>
+        </div>
+        <div class="p-company__history--item">
+          <div class="p-company__history--title c-heading-treat__circle"> 2019年（令和元年） </div>
+          <div class="p-company__history--txt-box">
+            <div class="p-company__history--mon">
+            </div>
+            <div class="p-company__history--txt"> ベッドメイキング事業開始 </div>
+          </div>
+        </div>
+        <div class="p-company__history--item">
+          <div class="p-company__history--title c-heading-treat__circle"> 2024年（令和6年） </div>
+          <div class="p-company__history--txt-box">
+            <div class="p-company__history--mon"> 1月 </div>
+            <div class="p-company__history--txt"> 糸満市西崎町4丁目 不動産購入<br> 新社屋（西崎町4-16-22）完成<br> ダクト製作工場（西崎町5-11-14）スタート </div>
+          </div>
+        </div>
+        <div class="p-company__history--item">
+          <div class="p-company__history--title">
+          </div>
+          <div class="p-company__history--txt-box">
+            <div class="p-company__history--mon">
+            </div>
+            <div class="p-company__history--txt"> 恩納村 不動産購入（国頭郡恩納村字恩納5408番地 </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="l-inner">
+      <section class="p-company__address">
+        <div class="p-company__history--heading c-font__h3">事業所一覧</div>
+        <div class="p-company__address-box">
+          <div class="p-company__address--img">
+            <img src="./images/common/company/address_1.jpg" alt="本社">
+          </div>
+          <div class="p-company__address--detail">
+            <p class="p-company__address--title c-heading-treat-02">本社</p>
+            <table class="p-company__address-table">
+              <tr>
+                <td class="p-company__address-table__left-col">住所</td>
+                <td class="p-company__address-table__right-col"> 〒901-0303<br> 沖縄県糸満市字兼城<br class="p-company__address-br "> ３４８番地の１</td>
+              </tr>
+              <tr>
+                <td class="p-company__address-table__left-col">電話</td>
+                <td class="p-company__address-table__right-col"> TEL:&nbsp;098-996-5331
+              </tr>
+              <tr>
+                <td class="p-company__address-table__left-col">MAP</td>
+                <td class="p-company__address-table__right-col">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d298.9986165017089!2d127.65768947872047!3d26.14540006901097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e567b22fe50baf%3A0x86cc7044242985b!2z44ix44K844Oz44K344On44Km44OI44Os44O844OH44Kj44Oz44Kw!5e1!3m2!1sja!2sjp!4v1750473201231!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="p-company__address-box">
+          <div class="p-company__address--img">
+            <img src="./images/common/company/address_2.jpg" alt="本社">
+          </div>
+          <div class="p-company__address--detail">
+            <p class="p-company__address--title c-heading-treat-02">西崎事務所（不動産管理）</p>
+            <table class="p-company__address-table">
+              <tr>
+                <td class="p-company__address-table__left-col">住所</td>
+                <td class="p-company__address-table__right-col"> 〒901-0303<br> 沖縄県糸満市字兼城<br class="p-company__address-br "> ３４８番地の１</td>
+              </tr>
+              <tr>
+                <td class="p-company__address-table__left-col">電話</td>
+                <td class="p-company__address-table__right-col"> TEL:&nbsp;098-996-5331
+              </tr>
+              <tr>
+                <td class="p-company__address-table__left-col">MAP</td>
+                <td class="p-company__address-table__right-col">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d298.9986165017089!2d127.65768947872047!3d26.14540006901097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e567b22fe50baf%3A0x86cc7044242985b!2z44ix44K844Oz44K344On44Km44OI44Os44O844OH44Kj44Oz44Kw!5e1!3m2!1sja!2sjp!4v1750473201231!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="c-contact-btn">
+      <h2 class="c-font__h2 c-contact-btn-heading">お問い合わせ</h2>
+      <div class="c-contact-btn__01">
+        <div class="l-inner">
+          <div class="c-contact-btn__01--txtarea">
+            <p class=" c-contact-btn__txt">電話で問い合わせる</p>
+            <p class="c-font__h5 c-contact-btn__tel">TEL<span>098-996-5331</span></p>
+            <p class="">営業時間 平日 9:00〜17:00 <br>休日日曜・祝祭日</p>
+          </div>
+        </div>
+      </div>
+      <div class="c-contact-btn__02">
+        <div class="l-inner">
+          <div class="c-contact-btn__02--txtarea">
+            <p class=" c-contact-btn__txt">メールで問い合わせる</p>
+            <a href="contact.html">
+              <div class="c-contact-btn__02--banar c-font__h4">
+                <span class="c-contact-btn__02--banar--txt">CONTACT</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="l-footer">
+    <a href="#top">
+      <div class="l-footer-top-btn__inner">
+        <div class="l-footer-top-btn">
+          <div class="l-footer-top-btn__txt"> page top </div>
+        </div>
+      </div>
+    </a>
+    <div class="l-footer__container">
+      <div class="l-inner">
+        <div class="l-footer__box">
+          <div class="l-footer__box-left">
+            <a href="/" class="l-footer__logo">
+              <img src="https://placehold.jp/ff7a33/ffffff/260x50.png?text=Logo%0A" alt="LOGO"></a>
+            <p class="l-footer__addres">〒901-0303<br>沖縄県糸満市字兼城348番地-1<br>TEL :098-992-4073</p>
+          </div>
+          <div class="l-footer__box-middle">
+            <div class="l-footer__box-link--left">
+              <ul class="l-footer__list">
+                <li class="l-footer__item">
+                  <a href="/">ホーム</a>
+                </li>
+                <li class="l-footer__item">
+                  <a href="recruit.html">採用情報</a>
+                </li>
+                <li class="l-footer__item">
+                  <a href="company.html">会社概要</a>
+                </li>
+                <li class="l-footer__item">
+                  <a href="information.html">お知らせ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="l-footer__box-link--right">
+              <ul class="l-footer__list">
+                <li class="l-footer__item">
+                  <a href="duct.html">ダクト制作・取付事業</a>
+                </li>
+                <li class="l-footer__item">
+                  <a href="hotel.html">ホテルトータルサポート事業</a>
+                </li>
+                <li class="l-footer__item">
+                  <a href="/">不動産管理事業</a>
+                </li>
+                <li class="l-footer__item">
+                  <a href="/">コンテナ事業</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="l-footer__box-right">
+            <a href="contact.html">
+              <div class="l-footer__box-right--banar01">問い合わせる</div>
+            </a>
+            <a href="/">
+              <div class="l-footer__box-right--banar02">
+                <p class="l-footer__box-right--banar02-txt">Instagram</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <p class="l-footer__copyright">Zensyo Trading Co., Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <div class="c-footer-floating-btn">
+    <div class="c-footer-floating-btn__01">
+      <div class="c-footer-floating-btn__icon-01">
+        <img src="./images/common/icon/tel.png" alt="電話アイコン" />
+      </div>
+      <a href="tel:0988808766">
+        <p>電話で<br>問い合わせる<br><span>098-996-5331</span></p>
+      </a>
+    </div>
+    <div class="c-footer-floating-btn__02">
+      <a href="contact.html">
+        <div class="c-footer-floating-btn__icon">
+          <img src="./images/common/icon/mail.png" alt="メールアイコン" />
+        </div>
+        <p>メールで<br>問い合わせる</p>
+      </a>
+    </div>
+  </div>
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

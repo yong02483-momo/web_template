@@ -1,0 +1,43 @@
+@use "global" as *;
+
+////////ヘッダーナビ 全体の設定//////////
+/// 
+.l-global-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $white;
+  @include mq("md") {
+    border: none;
+    height: rem(70);
+  }
+}
+
+.l-global-menu__logo {
+  width: rem(40);
+  display: block;
+  margin-left: rem(30);
+  @include mq("md") {
+    width: rem(70);
+  }
+}
+
+
+
+
+//PC版ナビ　SPサイズでは非表示にする
+.l-global-menu__pc {
+  display: none;
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+//ハンバーガーメニュー　PCサイズでは非表示にする
+.l-global-menu__hamburger {
+  display: block;
+  @include mq("md") {
+    display: none;
+  }
+}
+

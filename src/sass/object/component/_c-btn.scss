@@ -1,0 +1,138 @@
+@use "global" as *;
+
+/*ボタンスタイル1 矢印付き　hover時 背景がフェード*/
+
+.c-btn__style-01 {
+	background-color: $white;
+  border: 2px solid $black;
+	font-size: rem(16);
+	margin: 4rem auto 0 auto;
+	padding: rem(13) rem(24) rem(13) rem(24) ;
+	position: relative;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.c-btn__style-01:after {
+    content: "\f138";
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    padding-left: rem(10);
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.c-btn__style-01:hover {
+  background-color: $black;
+  color: $white;
+  transition: 0.2s;
+}
+
+
+
+/*ボタンスタイル2 hover時 背景色が横に流れる ：黒*/
+
+.c-btn__style-02 {
+  display: inline-block;
+  padding: rem(13) rem(24);
+  text-align: center;
+  text-decoration: none;
+  color: $black;
+  background-color: #fff;
+  position: relative;
+  border: 2px solid $black;
+  transition: color 0.5s ease;
+  z-index:2;
+}
+.c-btn__style-02:hover {
+  color: #fff;
+}
+.c-btn__style-02:hover::before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+.c-btn__style-02::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: $black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.5s ease;
+  transition-property: transform;
+}
+.c-btn__style-02-txt {
+  position: relative;
+  white-space: nowrap
+}
+
+
+
+/*ボタンスタイル３ hover時 背景色が横に流れる ：青*/
+.c-btn__style-03 {
+  display: inline-block;
+  padding: rem(13) rem(20);
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+  background-color: $primary;
+  position: relative;
+  border: 2px solid $primary;
+  transition: color 0.5s ease;
+}
+.c-btn__style-03:hover {
+  color: $primary;
+}
+.c-btn__style-03:hover::before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+.c-btn__style-03::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: $white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.5s ease;
+  transition-property: transform;
+}
+.c-btn__style-03-txt {
+  position: relative;
+  white-space: nowrap
+}
+
+
+
+/*ボタンスタイル4 hover時 背景がフェード :青*/
+.c-btn__style-04 {
+	background-color: $primary;
+  color: $white;
+  border: 2px solid $primary;
+	font-size: rem(16);
+	padding: rem(13) rem(24) rem(13) rem(24) ;
+	position: relative;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+
+.c-btn__style-04:hover {
+  background-color: $white;
+  color: $primary;
+  transition: 0.2s;
+}
+
+.c-btn__style-04-txt {
+  white-space: nowrap
+}

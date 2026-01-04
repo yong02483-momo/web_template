@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.c-section__bg-glay100 {
+  padding: rem(30) 0 rem(45) 0;
+  background-color: $gray100;
+  @include mq("md") {
+      padding: rem(63) 0 rem(76) 0;
+    }
+}
+
+.c-section__bg-glay300 {
+  padding: rem(30) 0 rem(45) 0;
+  background-color: $gray300;
+  @include mq("md") {
+      padding: rem(54) 0 rem(76) 0;
+    }
+}
+
+.c-section__bg-blue {
+    padding: rem(30) 0 rem(45) 0;
+  background-color: #D9E4F6;
+  @include mq("md") {
+      padding: rem(54) 0 rem(76) 0;
+    }
+}
+
+.c-section__hedding {
+  text-align: center;
+  padding-bottom: rem(26);
+  @include mq("md") {
+    padding-bottom: rem(58);
+  }
+}

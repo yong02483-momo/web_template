@@ -1,0 +1,27 @@
+@use "global" as *;
+.c-table {
+  max-width: 864px;
+  margin-inline: auto;
+  width: 100%;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+}
+.c-table th,
+.c-table td {
+  border-bottom: solid 1px #333333;
+  border-top: solid 1px #333333;
+}
+
+.c-table th {
+  color: #333333;
+  max-width: 200px;
+  min-width: 150px;
+  width: 30%;
+  padding: 1.3rem 0.8rem;
+}
+
+.c-table td {
+  color: #121212;
+  // text-align: left;
+  width: 70%;
+}

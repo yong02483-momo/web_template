@@ -1,0 +1,653 @@
+@use "global" as *;
+
+.p-top__service {
+ margin-top: rem(50);
+ padding-bottom:rem(40); 
+ position: relative;
+ @include mq("sm") {
+  margin-top: rem(70);
+  padding: rem(40) 0; 
+ }
+}
+
+.p-top__service--back {
+  position: absolute;
+  top: 0.8%;
+  font-size: rem(65);
+  z-index: -1;
+  @include mq("sm") {
+   top: 6.8%;
+}
+  @include mq("md") {
+   font-size: rem(140); 
+   top: 2%;
+}
+}
+
+
+.p-top__service--hedding {
+ text-align: center;
+ padding-bottom: rem(50);
+ @include mq("md") {
+   padding-bottom: rem(80); 
+}
+}
+
+.p-top__business {
+ padding: 0 rem(20);
+ @include mq("sm") {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  max-width: rem(1120);
+  margin: 0 auto;
+}
+}
+
+ /* 画面外にいる状態 */
+.p-top__business--item  {
+	opacity : 0;
+	transform : translate(0, 35px);
+	transition : transform 1100ms, opacity 1500ms;
+  position: relative; 
+   @include mq("sm") {
+    width: calc(50% - 1rem);
+    margin: 0 auto;
+  }
+   @include mq("md") {
+    width: calc(50% - 2rem);
+    margin: 0 auto;
+  }
+	}
+
+/* 画面内に入った状態 */
+.p-top__business--item.scrollin {
+	opacity : 1;
+	transform : translate(0, 0);
+	}
+
+.p-top__business--parts {
+ 
+  width: 100%;
+  height: rem(245);
+  margin-bottom: rem(17);
+  background-size: cover; 
+  position: relative;
+  @include mq("md") {
+    height: rem(402);
+    margin: 0 auto rem(30) auto;
+  }
+}
+
+
+.p-top__business--parts.img01 {
+   background-image: url("../images/common/top/service_duct.jpg");
+}
+
+.p-top__business--parts.img02 {
+   background-image: url("../images/common/top/service_hotel.jpg");
+}
+
+.p-top__business--parts.img03 {
+   background-image: url("../images/common/top/service_rent.jpg");
+}
+
+.p-top__business--parts.img04 {
+   background-image: url("../images/common/top/service_container.jpg");
+}
+
+
+//画像に黒の乗算レイヤーをかける
+.p-top__business--parts::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5,32,101,0.5); 
+  mix-blend-mode: multiply;
+}
+
+//事業内容　hover時
+.p-top__business--parts:hover::before {
+   background-color: rgba(5,32,101,0.8); 
+   transition: 0.5s;
+}
+
+.p-top__business--parts:hover .p-top__business--parts--hedding {
+  color: white;
+  font-size: rem(25);
+  transition: 0.5s;
+   @include mq("md") {
+  font-size: rem(42);  
+    }
+}
+
+
+.p-top__business--parts--hedding {
+  position: absolute; 
+  top: 50%; /* 上端を親要素の高さの 50% に配置 */
+  left: 50%; /* 左端を親要素の幅の 50% に配置 */
+  transform: translate(-50%, -50%); /* 子要素自身を中央に移動 */
+  color: $white;
+  transition: background-color 500ms;
+  white-space: nowrap;
+}
+
+.p-top__business--parts--txt {
+  position: absolute; 
+  bottom: 8%; /* 上端を親要素の高さの 50% に配置 */
+  right: 12%; /* 左端を親要素の幅の 50% に配置 */ 
+  font-size: rem(12);
+  color: $white;
+    @include mq("md") {
+     bottom: 13%;
+     right: 15%;
+     font-size: rem(15);
+    }
+}
+
+.p-top__business--parts--txt:after {
+	content: "＞";
+	font-weight: 500;
+	position: absolute;
+	top: 50%;
+  right: -30%;
+	transform: translateY(-50%);
+  color: $white;
+}
+
+
+.p-top__about {
+  margin-bottom: 7%;
+  position:relative;
+}
+
+.p-top__about::before {
+    background-image: url(../images/common/top/about_back-sp.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+    width: 100%;
+    height: 110%;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1; 
+     @include mq("md") {
+      width: 100%;
+       background-image: url(../images/common/top/about_back-pc.png);
+       overflow: hidden;
+      }
+}
+
+.p-top__about--heading {
+      text-align: center;
+      color: $white;
+      padding: rem(75) 0 rem(36) 0;
+       @include mq("md") {
+           padding: 13% 0 5% 0;
+      }
+}
+
+.p-top__about--heading br{
+         @include mq("md") {
+        display: none;
+      }
+}
+
+.p-top__about--img {
+  opacity : 0;
+	transform : translate(-40px,0);
+	transition : transform 1200ms, opacity 1200ms;
+  position: relative; 
+  
+  width: 100%;
+  aspect-ratio: 375 / 312; 
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow : 0px 4px 5px rgba(0,0,0, 0.25);
+  @include mq("sm") {
+    aspect-ratio: 723 / 467; 
+    height: auto;
+  }
+  @include mq("md") {
+    width: 50%;
+    position: absolute;
+    top: 37%;
+  }
+  @include mq("xl") {
+    top: 41%;
+  }
+}
+
+/* 画面内に入った状態 */
+.p-top__about--img.scrollin {
+	opacity : 1;
+	transform : translate(0, 0);
+	}
+
+.p-top__about--img img {
+  display: block;
+  transform: scale(1.34) translateY(35px); 
+  @include mq("sm") {
+   transform: none;
+  }
+}
+
+
+.p-top__about--txtbox {
+  background-color: $white; 
+  width: 95%;
+  margin-left: auto;
+  padding: rem(24) rem(18) rem(27) rem(18);
+  @include mq("md") {
+    width: 60%;
+    margin-left: auto;
+    padding: rem(118) rem(40) rem(160) rem(150);
+  }
+   @include mq("lg") {
+    padding: rem(118) rem(150) rem(180) rem(170);
+  }
+    @include mq("xl") {
+    padding: rem(118) rem(170) rem(208) rem(170);
+  }
+}
+
+.p-top__about--txt {
+   font-size: $p3;
+   padding-bottom: rem(26);
+   max-width: rem(500);
+   margin: 0 auto;
+    @include mq("md") {
+      font-size: rem(18);
+      padding-bottom: rem(120);
+    }
+}
+
+.p-top__about--btn {
+    margin-left: auto;
+    width: fit-content;
+    
+    @include mq("xl") {
+     margin-right: 14%;
+    }
+}
+
+.p-top__about--back {
+  display: none;
+  @include mq("md") {
+   display: block;
+   position: absolute;
+   font-size: rem(140); 
+   top: 76%;
+   right: 2%;
+}
+ @include mq("xl") {
+    top: 80%;
+   right: 5%;
+} 
+}
+
+.p-top__feature {
+  position: relative; 
+  padding-top: 8rem;
+  padding-bottom: 17rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+   @include mq("md") {
+     padding-top: rem(160);
+     padding-bottom: 28rem;
+  }
+  @media screen and (min-width: 1200px) {
+      margin-top: 16%;
+      padding-bottom: 20rem;
+    }
+}
+
+
+.p-top__feature-recruit-background {
+    background-color: $gray100;
+    height: 129%;
+    left: 0;
+    position: absolute;
+    width: 75%;
+    overflow: visible;
+    z-index: -2;
+    top: -3rem;
+      @include mq("md") {
+         width: 88%;
+      }    
+}
+
+.p-top__feature--back {
+    display: block;
+    font-size: rem(64);
+    position: absolute;
+    top: 3.1rem;
+  @include mq("md") {
+    display: block;
+    font-size: rem(128);
+    top: 0.3rem;
+}
+}
+
+.p-top__feature-01 {
+  position: relative; 
+  opacity : 0;
+	transform : translate(40px,0);
+	transition : transform 1200ms, opacity 1200ms;
+}
+
+.p-top__feature-01.scrollin {
+	opacity : 1;
+	transform : translate(0, 0);
+	}
+
+
+.p-top__feature-02 {
+  position: relative; 
+  margin-top: 16rem;
+  opacity : 0;
+	transform : translate(-40px,0);
+	transition : transform 1200ms, opacity 1200ms;
+
+  @include mq("md") {
+     margin-top: 24rem;
+  }
+  @include mq("lg") {
+     margin-top: rem(330);
+  }
+}
+
+.p-top__feature-02.scrollin {
+	opacity : 1;
+	transform : translate(0, 0);
+	}
+
+.p-top__feature--txtbox {
+  background-color: $black;
+  top: 90%;
+  width: 90%;
+   @include mq("md") {
+    width: 60%;
+  }
+}
+
+.p-top__feature--txtbox--bg {
+  top: 87.5%;
+  width: 90%;
+   @include mq("md") {
+    width: 60%;
+  }
+}
+
+
+.p-top__feature--heading {
+  color: $white;
+  position: relative;  
+  padding-bottom: rem(21);
+  @include mq("md") {
+  padding-bottom: rem(36);
+  }
+}
+
+.p-top__feature--heading.feature02 {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: rem(21);
+  letter-spacing: 0.6px;
+  position: relative;  
+  padding-bottom: rem(21);
+  white-space: nowrap;
+  @include mq("md") {
+    font-size: rem(38);
+    padding-bottom: rem(36);
+  }
+}
+
+.p-top__feature--heading::before {
+    background-color: #79A6fd;
+    content: "";
+    height: 0.25rem;
+    left: -1.75rem;
+    position: absolute;
+    top: 2.5rem;
+    width: 14%;
+  @include mq("md") {
+        height: 0.625rem;
+        left: -5.5rem;
+        top: 1.625rem;
+        width: 11%;
+   }
+}
+
+.p-top__feature--txt {
+   color: $white;
+   font-size: $p3;
+    @include mq("md") {
+      font-size: $p2;
+    }
+  }
+
+.p-top__feature--img {
+  width: 100%;
+  height: 335px;
+  overflow: hidden;
+  margin: 0 auto;
+   @include mq("md") {
+        aspect-ratio: 1440 / 560;
+        height: auto;
+        max-height: 560px;
+   }
+}
+
+.p-top__feature--img-01 {
+  display: block;
+  transform: scale(2) translateY(-22px);
+  @include mq("md") {
+   transform: scale(1.5) translateY(-100px);
+  }
+}
+
+.p-top__feature--img-02 {
+  display: block;
+  transform: scale(1.4) translateY(25px);
+   @include mq("sm") { 
+    transform: scale(1.2) translateY(-21px);
+   }
+  @include mq("md") {
+   transform: scale(1) translateY(-130px);
+  }
+}
+
+
+.p-top__recruit {
+  background-color: $primary-sub;
+  position: relative;
+  padding: rem(51) 0;
+
+  @include mq("md") {
+     padding: rem(121) 0;
+      margin-bottom: 17rem;
+    }
+    @include mq("xl") {
+     margin-bottom: 11rem;
+  }
+}
+
+.p-top__recruit--heading {
+   text-align: center;
+   position: absolute;
+   z-index: 2;
+   left: 50%;
+   transform: translate(-50%, -25%); 
+   opacity : 0;
+	 transition : transform 900ms, opacity 900ms;
+     @include mq("md") {
+    transform: translate(-50%, -35%); 
+  }
+}
+
+.p-top__recruit--heading.scrollin {
+	opacity : 1;
+  transform: translate(-50%, -45%); 
+  @include mq("md") {
+    transform: translate(-50%, -55%); 
+  }
+	}
+
+.p-top__recruit--treat{
+  display: inline-block;
+  color: $white;
+  letter-spacing: 0.8px;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 440;
+  font-size: rem(64);
+  text-align: center;
+   @include mq("md") {
+     font-size: rem(128);
+  }
+}
+
+.p-top__recruit--title {
+ color: $white;
+ margin-top: -10px;
+  @include mq("md") {
+     margin-top: -20px;
+  }
+}
+
+.p-top__recruit--bg {
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  margin: 0 auto;
+  @include mq("sm") {
+    height: 700px;
+  }
+   @include mq("md") {
+        aspect-ratio: 1440 / 980;
+        height: auto;
+        max-height: 980px;
+   }
+   @include mq("lg") {
+        aspect-ratio: 1440 / 870;
+        max-height: 870px;
+   }
+}
+
+.p-top__recruit--bg img {
+  display: block;
+     transform: scale(3.8) translateY(77px);
+     
+  @include mq("md") {
+      transform: scale(1.8) translateY(30px);
+  }
+     @include mq("lg") {
+       transform: scale(1.1) translateY(-23px);
+   }
+}
+
+.p-top__recruit--img {
+  position: absolute;
+  width: 100%;
+  height: 335px;
+  max-width: 520px;
+  overflow: hidden;
+  z-index: 1;
+  top: 16%;
+  right: 0%;
+  opacity : 0;
+	transform : translate(0,40px);
+	transition : transform 1400ms, opacity 1400ms;
+   @include mq("md") {
+        aspect-ratio: 1340 / 613;
+        height: auto;
+        width: 93%;
+        top: 27.5%;
+        max-width: 1340px;
+   }
+}
+
+.p-top__recruit--img.scrollin {
+	opacity : 1;
+	transform : translate(0, 0);
+	}
+
+.p-top__recruit--img img {
+  display: block;
+     transform: scale(3.8) translateY(77px);
+  @include mq("md") {
+      transform: scale(1.1) translateY(-23px);
+  }
+}
+
+.p-top__recruit--txtbox {
+  background-color: $white;
+  top: 45%;
+  width: 90%;
+  @include mq("md") {
+  top: 60%;
+  width: 70%;
+  }
+}
+
+
+.p-top__recruit--txtbox--bg {
+  background-color: $primary-sub;
+    top: 44%;
+    width: 90%;
+  @include mq("md") {
+    top: 58.5%;
+    width: 70%;
+  }
+}
+
+.p-top__recruit-heading {
+  color: $black;
+  padding-bottom: rem(24);
+  font-size: rem(25);
+  @include mq("md") {
+  padding-bottom: rem(36);
+  margin-top: -20px;
+  }
+}
+
+
+
+.p-top__recruit--txt {
+  color: $black;
+  font-size: $p3;
+   @include mq("lg") {
+      font-size: $p2;
+  }
+}
+
+.p-top__recruit--btn {
+  margin-top: rem(18);
+  margin-left: auto;
+  width: fit-content;
+   @include mq("md") {
+   margin-top: rem(44);   
+  }
+}
+
+
+.p-top__information--heading {
+  padding-bottom: rem(20);
+  margin: 0 auto;
+  width: fit-content;
+  @include mq("md") {
+    padding-bottom: rem(30);
+  }
+}
+
+.p-top__information--btn {
+  margin:rem(18) auto 0 auto;
+  width: fit-content;
+   @include mq("md") {
+    margin:rem(44) auto 0 auto; 
+  }
+}
+

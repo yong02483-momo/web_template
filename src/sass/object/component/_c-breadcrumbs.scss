@@ -1,0 +1,28 @@
+@use "global" as *;
+
+
+ /* パンくずリスト */
+.c-breadcrumbs {
+  display: flex;
+  margin: rem(24) 0 rem(30) rem(16);
+  @include mq("md") {
+  margin: rem(30) 0 rem(75) 10%;
+  }
+
+}
+.c-breadcrumbs li:not(:last-of-type)::after {
+  content: "/";
+  margin: rem(8); 
+  color: #777;
+}
+
+.c-breadcrumbs li {
+  font-size: rem(12);
+  @include mq("md") {
+    font-size: rem(14);
+    }
+}
+
+.c-breadcrumbs__blue {
+  color: $primary;
+}
